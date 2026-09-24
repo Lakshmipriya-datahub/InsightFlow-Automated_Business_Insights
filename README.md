@@ -57,6 +57,7 @@ InsightFlow-Automated_Business_Insights/
 ├── insight_engine.py
 ├── requirements.txt
 └── README.md
+```
 
 ## ▶️ How to Run
 
@@ -65,15 +66,18 @@ InsightFlow-Automated_Business_Insights/
 ```bash
 git clone https://github.com/Lakshmipriya-datahub/InsightFlow-Automated_Business_Insights.git
 cd InsightFlow-Automated_Business_Insights
+```
 
 2.Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
 
 3.Run the Streamlit application:
-
+```bash
 streamlit run app.py
+```
 
 ## 🚀 Future Enhancements
 
