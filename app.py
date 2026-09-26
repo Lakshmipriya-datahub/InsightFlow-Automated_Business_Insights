@@ -732,6 +732,7 @@ filtered_df = df.copy()
 
 filter_definitions = filter_definitions[:5]
 
+st.write("DEBUG FILTERS:", filter_definitions)
 
 # ============================================================
 # ROW 1 — MAXIMUM 3 FILTERS
