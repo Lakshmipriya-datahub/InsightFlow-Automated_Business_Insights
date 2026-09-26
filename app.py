@@ -550,6 +550,10 @@ for col in df.columns:
 
 filter_definitions = []
 
+st.write("DEBUG COLUMNS:", df.columns.tolist())
+st.write("DEBUG DTYPES:", df.dtypes.astype(str).to_dict())
+st.write("DEBUG ROWS:", len(df))
+
 # ONE Platform filter for the five Boolean platform columns
 if platform_columns:
     filter_definitions.append(
