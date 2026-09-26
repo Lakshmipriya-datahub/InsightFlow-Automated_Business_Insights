@@ -550,9 +550,6 @@ for col in df.columns:
 
 filter_definitions = []
 
-st.write("DEBUG COLUMNS:", df.columns.tolist())
-st.write("DEBUG DTYPES:", df.dtypes.astype(str).to_dict())
-st.write("DEBUG ROWS:", len(df))
 
 # ONE Platform filter for the five Boolean platform columns
 if platform_columns:
@@ -662,6 +659,7 @@ for keyword in priority_keywords:
         if (
             pd.api.types.is_object_dtype(df[col])
             or pd.api.types.is_categorical_dtype(df[col])
+            or pd.api.types.is_string_dtype(df[col])
         ):
 
             unique_count = df[col].nunique(dropna=True)
@@ -713,6 +711,7 @@ if len(filter_definitions) < 5:
         if (
             pd.api.types.is_object_dtype(df[col])
             or pd.api.types.is_categorical_dtype(df[col])
+            or pd.api.types.is_string_dtype(df[col])
         ):
 
             unique_count = df[col].nunique(dropna=True)
@@ -735,8 +734,6 @@ if len(filter_definitions) < 5:
 filtered_df = df.copy()
 
 filter_definitions = filter_definitions[:5]
-
-st.write("DEBUG FILTERS:", filter_definitions)
 
 # ============================================================
 # ROW 1 — MAXIMUM 3 FILTERS
